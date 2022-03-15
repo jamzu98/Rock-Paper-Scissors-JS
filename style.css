@@ -72,7 +72,7 @@ button {
 
 .playerButton:hover {
     animation-name: heartbeatEffect;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 button:active {
@@ -136,6 +136,25 @@ footer {
     background-color: red;
 }
 
+.drawNotification {
+    display: none;
+}
+
+.drawNotification.show{
+    display: block;
+}
+
+.draw-notif {
+    opacity: 0;
+    animation-name: drawAnimation;
+    animation-duration: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
 /* ANIMATIONS */
 
 @keyframes footerGlow {
@@ -154,4 +173,11 @@ footer {
     0% {transform: scale(0);}
     50% {transform: scale(1.5);}
     100% {transform: scale(1);}
+}
+
+@-webkit-keyframes drawAnimation {
+    0% {transform: scale(0);}
+    30% {transform: scale(1.5); opacity: 100;}
+    70% {transform: scale(1); opacity: 100;}
+    100% {transform: scale(0);}
 }

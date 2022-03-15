@@ -13,6 +13,7 @@ const heart5 = document.getElementById('heart5');
 const retryText = document.getElementById('retryText');
 const modalContainer = document.getElementById('modal_container');
 const retryButton = document.getElementById('retryButton');
+const drawNotification = document.getElementById('drawNotification');
 
 let playerScore = 0;
 
@@ -53,6 +54,7 @@ function makeSelection(selection) {
     addSelectionResult(selection, yourWinner)
 
     if (yourWinner) {
+        drawNotification.classList.remove('show');
         incrementScore(yourScoreSpan);
         playerScore++;
         if(playerScore === 5) {
@@ -69,7 +71,8 @@ function makeSelection(selection) {
         }
     }
     if(selection===computerSelection) {
-
+        drawNotification.classList.remove('show');
+        drawNotification.classList.add('show');
         console.log("draw");
     }
 }
