@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/87f4857114.js" crossorigin="anonymous"></script>
     <title>Rock Paper Scrissors JS</title>
 </head>
 <body>
+    <header class="header">
+        <h1 class="title">ROCK PAPER SCISSORS JS</h1>
+    </header>
+    <main class="main">
+        <div class="scoreboard">
+            <h2 class="howtoplay">CHOOSE WISELY</h2>
+            <h3 class="howtoplay2"><i class="fa-solid fa-skull"></i> IF YOU RUN OUT OF LIVES BEFORE REACHING 5 WINS YOU WILL LOSE <i class="fa-solid fa-skull"></i></h3>
+            <div class="healthBar">
+                <p>HEALTH:</p>
+                <span class="playerHealth" data-player-health>
+                    <i class="fa-solid fa-heart hearts" id="heart1"></i>
+                    <i class="fa-solid fa-heart hearts" id="heart2"></i>
+                    <i class="fa-solid fa-heart hearts" id="heart3"></i>
+                    <i class="fa-solid fa-heart hearts" id="heart4"></i>
+                    <i class="fa-solid fa-heart hearts" id="heart5"></i>
+                </span>
+            </div>
+            <div class="playerScores">
+                <div class="scores">
+                    <i class="fa-solid fa-user-large"></i>
+                    <p class="playerScore">Player: <span data-your-score>0</span></p>
+                </div>
+                <div class="scores">
+                    <i class="fa-solid fa-desktop"></i>
+                    <p class="playerScore">CPU: <span data-computer-score>0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" class="playerButton" id="rockButton" data-selection="rock">
+                <i class="fa-solid fa-hand-back-fist fa-2x"></i></button>
+            <button type="button" class="playerButton" id="paperButton" data-selection="paper">
+                <i class="fa-solid fa-hand fa-2x"></i></button>
+            <button type="button" class="playerButton" id="scissorsButton" data-selection="scissors">
+                <i class="fa-solid fa-hand-scissors fa-2x"></i></button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footerText">Copyright © <script>document.write(new Date().getFullYear())</script> JAMIMAKKONEN</p>
+    </footer>
+
+    <div class="modal-container" id="modal_container">
+        <div class="modal-content">
+            <h1 id="retryText">Ready to Try again?</h1>
+            <button class="retryButton" id="retryButton">Retry</button>
+        </div>
+    </div>
+
     <script src="javascript.js"></script>
 </body>
 </html>
